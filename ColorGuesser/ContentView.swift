@@ -58,7 +58,7 @@ struct ContentView: View {
             PopupControllerMessage.GameCenter.postNotification()
         }
     }
-    
+    //MARK: -Functions
     func computeScore() -> Int {
         let rDiff = rGuess - rTarget
         let gDiff = gGuess - gTarget
@@ -66,7 +66,22 @@ struct ContentView: View {
         let diff = sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
         return Int((1.0 - diff) * 100.0 + 0.5)
     }
-    
+    func showAdvertisment(){
+            let randomAd = Bool.random()
+            if (randomAd == true) {
+                self.interstitialAd.showAd()
+                print("Display Ad")
+            } else {
+                print("Not displaying Ad this time around")
+            }
+    }
+    func submitScore(){
+        if(tryCounter == 1){
+            self.leaderboard.addScore(score: self.computeScore())
+            self.gameCenter.submitScoreToGC(self.computeScore())
+            print("score submitted to Game Center")
+        }
+    }
     func hitNewGame() {
         rGuess = 0.5
         gGuess = 0.5
@@ -208,30 +223,22 @@ struct ContentView: View {
             .shadow(color: .gray, radius: 20.0, x: 20, y: 10)
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Your Score"), message: Text(" You got a score of \(computeScore())"), primaryButton: .default(Text("Keep Guessing")) {
-                        if (self.tryCounter == 1) {
-                            self.leaderboard.addScore(score: self.computeScore())
-                            self.gameCenter.submitScoreToGC(self.computeScore())
-                        }
-                        print("Keep Guessing")
+                        self.submitScore()
+                        print("Keeping Guessing")
                         self.tryCounter += 1
+                    if(self.tryCounter % 3 == 0) {
+                        self.showAdvertisment()
+                        print("Potench showing a new ad")
+                    }
                     }, secondaryButton: .cancel(Text("New Game")) {
-                        print("Guessing")
-                        if (self.tryCounter == 1) {
-                            self.leaderboard.addScore(score: self.computeScore())
-                            self.gameCenter.submitScoreToGC(self.computeScore())
+                        print("Final Guess")
+                        if(self.gameCounter % 2 == 0 || self.gameCounter % 5 == 0) {
+                            self.showAdvertisment()
+                            print("Potench showing a new ad")
                         }
+                        self.submitScore()
                         self.hitNewGame()
                         self.gameCounter += 1;
-                        if(self.gameCounter % 2 == 0 || self.gameCounter % 5 == 0) {
-                            print("Multiple of 3")
-                            let randomAd = Bool.random()
-                            if (randomAd == true) {
-                                self.interstitialAd.showAd()
-                                print("Display Ad")
-                            } else {
-                                print("Not displaying Ad this time around")
-                            }
-                        }
                         print(self.gameCounter)
                     })
             }
