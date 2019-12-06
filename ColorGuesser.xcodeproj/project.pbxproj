@@ -515,7 +515,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.0;
+				CURRENT_PROJECT_VERSION = 3.0.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -543,7 +543,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.0;
+				CURRENT_PROJECT_VERSION = 3.0.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
