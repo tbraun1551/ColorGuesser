@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Purple",
+        "id": 1,
+        "imageName": "turtlerock"
+    },
+    {
+        "name": "Ice Blue"
+        "id": 2
+        "imageName": "AlternateIcon2"
+    },
+    {
+        "name": "Lime Green",
+        "id": 3
+        "imageName": "AlternateIcon3"
+    }
+    {
+        "name": "Red",
+        "id": 4,
+        "imageName": "AlternateIcon4"
+    }
+    {
+        "name": "Navy Blue",
+        "id": 5,
+        "imageName": "AlternateIcon5"
+    }
+    
+]
+
+
