@@ -24,7 +24,6 @@
 		976C4CC8237663F10097834A /* Icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 976C4CC5237663F10097834A /* Icon1@2x.png */; };
 		976FCABD23732171003BFBB6 /* AppIconChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976FCABC23732171003BFBB6 /* AppIconChanger.swift */; };
 		977513BC236B87DB007AC8BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977513BB236B87DB007AC8BA /* GameKit.framework */; };
-		977513BE236B87E4007AC8BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977513BD236B87E4007AC8BA /* StoreKit.framework */; };
 		979241E5238B6CDC00D7DA8D /* PopupControllerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979241E4238B6CDB00D7DA8D /* PopupControllerMessage.swift */; };
 		979241E7238B6CE000D7DA8D /* GameKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979241E6238B6CE000D7DA8D /* GameKitHelper.swift */; };
 		97B5C5BE2373312E000778FE /* AlternateIcon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B5C5B62373312E000778FE /* AlternateIcon2@2x.png */; };
@@ -68,7 +67,6 @@
 		976C4CC5237663F10097834A /* Icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon1@2x.png"; path = "App Icons/ColorGuesserLogo/ios/AppIcon.appiconset/Icon1@2x.png"; sourceTree = "<group>"; };
 		976FCABC23732171003BFBB6 /* AppIconChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconChanger.swift; sourceTree = "<group>"; };
 		977513BB236B87DB007AC8BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		977513BD236B87E4007AC8BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		979241E4238B6CDB00D7DA8D /* PopupControllerMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupControllerMessage.swift; sourceTree = "<group>"; };
 		979241E6238B6CE000D7DA8D /* GameKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameKitHelper.swift; sourceTree = "<group>"; };
 		97B5C5B62373312E000778FE /* AlternateIcon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AlternateIcon2@2x.png"; path = "App Icons/AlternateIcon2@2x.png"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				977513BE236B87E4007AC8BA /* StoreKit.framework in Frameworks */,
 				8F74C45B30EBE17C141EFF3E /* Pods_ColorGuesser.framework in Frameworks */,
 				977513BC236B87DB007AC8BA /* GameKit.framework in Frameworks */,
 			);
@@ -119,7 +116,6 @@
 		79AB2027297FC5250D97250C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				977513BD236B87E4007AC8BA /* StoreKit.framework */,
 				977513BB236B87DB007AC8BA /* GameKit.framework */,
 				2069484291E247D173450A51 /* Pods_ColorGuesser.framework */,
 			);
@@ -515,7 +511,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.3;
+				CURRENT_PROJECT_VERSION = 3.0.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -543,7 +539,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.3;
+				CURRENT_PROJECT_VERSION = 3.0.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;

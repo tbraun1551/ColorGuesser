@@ -65,12 +65,12 @@ class ViewModel {
         let keyword: String
         
         switch index {
-            case 0: keyword = "ntip1"
-            case 1: keyword = "ftip1000"
-            case 2: keyword = "atip10"
-            case 3: keyword = "stip20"
-            case 4: keyword = "ktip"
-            case 5: keyword = "gtip5"
+            case 0: keyword = "com.Braun.ColorGuesser.NiceTip"
+            case 1: keyword = "com.Braun.ColorGuesser.KindTip"
+            case 2: keyword = "com.Braun.ColorGuesser.GenerousTip"
+            case 3: keyword = "com.Braun.ColorGuesser.AwesomeTip"
+            case 4: keyword = "com.Braun.ColorGuesser.SuperhumanTip"
+            case 5: keyword = "com.Braun.ColorGuesser.FullSendTip"
             default: keyword = ""
         }
         print("The index called ")

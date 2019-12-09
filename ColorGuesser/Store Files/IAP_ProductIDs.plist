@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>ntip1</string>
-	<string>ftip1000</string>
-	<string>atip10</string>
-	<string>stip20</string>
-	<string>ktip</string>
-	<string>gtip5</string>
+	<string>com.Braun.ColorGuesser.NiceTip</string>
+	<string>com.Braun.ColorGuesser.KindTip</string>
+	<string>com.Braun.ColorGuesser.GenerousTip</string>
+	<string>com.Braun.ColorGuesser.AwesomeTip</string>
+	<string>com.Braun.ColorGuesser.SuperhumanTip</string>
+	<string>com.Braun.ColorGuesser.FullSendTip</string>
 </array>
 </plist>
