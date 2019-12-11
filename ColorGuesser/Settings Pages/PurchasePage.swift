@@ -12,7 +12,7 @@ import Foundation
 
 struct PurchasePage: View {
     
-    
+    var viewModel = ViewModel()
     
     var body: some View {
         VStack {
@@ -42,6 +42,10 @@ struct PurchasePage: View {
             }) {
                 Text("Restore Purchases")
             }
+        }
+        .onAppear(){
+            print("loading product identifiers")
+            self.viewModel.viewDidSetup()
         }
         .padding()
         .navigationBarTitle(Text(""), displayMode: .inline)
@@ -77,10 +81,10 @@ struct tipButton: View {
             .padding(5.0)
             .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.75))
             .clipShape(Capsule())
-        } .onAppear() {
-            print("loading product identifiers")
-            self.viewModel.viewDidSetup()
-        }
+        } //.onAppear() {
+//            print("loading product identifiers")
+//            self.viewModel.viewDidSetup()
+//        }
     }
     
     func initiateItem(){

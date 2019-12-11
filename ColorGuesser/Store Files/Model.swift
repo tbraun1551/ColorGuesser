@@ -16,7 +16,7 @@ class Model {
     func getProduct(containing keyword: String) -> SKProduct? {
        // print("The array of SKProducts in Model getProduct is \(products)")
        // let test = products.filter { $0.productIdentifier.contains(keyword) }.first
-        print("testicle")
+        print("The products are: \(products)")
         print(products.filter { $0.productIdentifier.contains(keyword) }.first)
         return products.filter { $0.productIdentifier.contains(keyword) }.first
     }

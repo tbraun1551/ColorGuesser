@@ -42,14 +42,18 @@ class IAPManager: NSObject {
     // MARK: - General Methods
     
     fileprivate func getProductIDs() -> [String]? {
-        guard let url = Bundle.main.url(forResource: "IAP_ProductIDs", withExtension: "plist") else { return nil }
+        guard let url = Bundle.main.url(forResource: "IAP_ProductIDs", withExtension: "plist") else {
+            print("failed to get ProductID plist")
+            return nil
+        }
         do {
             let data = try Data(contentsOf: url)
             let productIDs = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as? [String] ?? []
+            print("got productIDs: \(productIDs)")
             return productIDs
         } catch {
             print(error.localizedDescription)
-            print("Could not get the product IDS in IAPManager 1")
+            print("Could not get the product IDS in IAPManager")
             return nil
         }
     }
@@ -87,10 +91,11 @@ class IAPManager: NSObject {
 
         // Get the product identifiers.
         guard let productIDs = getProductIDs() else {
+            print("could not get product IDs")
             productsReceiveHandler(.failure(.noProductIDsFound))
             return
         }
-
+//        print("Product id were received they are: \(productIDs)")
         // Initialize a product request.
         let request = SKProductsRequest(productIdentifiers: Set(productIDs))
 
@@ -188,8 +193,10 @@ extension IAPManager: SKProductsRequestDelegate {
         if products.count > 0 {
             // Call the following handler passing the received products.
             onReceiveProductsHandler?(.success(products))
+            print("The products found were \(products)")
         } else {
             // No products were found.
+            print("0 products were found")
             onReceiveProductsHandler?(.failure(.noProductsFound))
         }
     }

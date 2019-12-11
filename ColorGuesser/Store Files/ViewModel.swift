@@ -95,8 +95,14 @@ class ViewModel {
                 self.delegate?.didFinishLongProcess()
                 
                 switch result {
-                    case .success(let products): self.model.products = products
-                    case .failure(let error): self.delegate?.showIAPRelatedError(error)
+                case .success(let products): do {
+                    self.model.products = products
+                    print("The view did setup")
+                    }
+                case .failure(let error): do {
+                    self.delegate?.showIAPRelatedError(error)
+                    print("View Failed to setup")
+                    }
                 }
             }
         }
@@ -105,6 +111,7 @@ class ViewModel {
     
     func purchase(product: SKProduct) -> Bool {
         if !IAPManager.shared.canMakePayments() {
+            print("User cannot make payments")
             return false
         } else {
             delegate?.willStartLongProcess()
