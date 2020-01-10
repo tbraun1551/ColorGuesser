@@ -22,6 +22,8 @@ struct ContentView: View {
         self.gameCenter.authenticateLocalPlayer()
         self.gameKit = GameKitHelper.sharedInstance
         self.gameKit.authenticateLocalPlayer()
+		self.haptics = Haptics()
+		self.haptics.createAndStartHapticEngine()
     }
     
     //GameCenter Variables
@@ -33,6 +35,10 @@ struct ContentView: View {
     
     var leaderboard: LeaderBoard
     var settings: SettingsView
+	var haptics: Haptics
+	
+	//Haptic feedback methods
+    let notification = UINotificationFeedbackGenerator()
     
     @State var rTarget = Double.random(in: 0..<1)
     @State var gTarget = Double.random(in: 0..<1)
@@ -58,6 +64,8 @@ struct ContentView: View {
             PopupControllerMessage.GameCenter.postNotification()
         }
     }
+
+    
     //MARK: -Functions
     func computeScore() -> Int {
         let rDiff = rGuess - rTarget
@@ -74,6 +82,7 @@ struct ContentView: View {
             } else {
                 print("Not displaying Ad this time around")
             }
+        self.interstitialAd.LoadInterstitial()
     }
     func submitScore(){
         if(tryCounter == 1){
@@ -175,28 +184,28 @@ struct ContentView: View {
             //MARK: - Sliders
             VStack {
                 HStack {
-                    MinusButton(value: $rGuess)
+                    MinusButton(value: $rGuess, haptics: self.haptics)
                         .accentColor(Color(red: rGuess + 0.25, green: 0.0, blue: 0.0))
                     ColorSlider(value: $rGuess)
                         .accentColor(Color(red: rGuess + 0.25, green: 0.0, blue: 0.0))
-                    PlusButton(value: $rGuess)
+					PlusButton(value: $rGuess, haptics: self.haptics)
                         .accentColor(Color(red: rGuess + 0.25, green: 0.0, blue: 0.0))
                 }
                 HStack {
-                    MinusButton(value: $gGuess)
+                    MinusButton(value: $gGuess, haptics: self.haptics)
                         .accentColor(Color(red: 0.0, green: gGuess + 0.25, blue: 0.0))
                     ColorSlider(value: $gGuess)
                         .accentColor(Color(red: 0.0, green: gGuess + 0.25, blue: 0.0))
-                    PlusButton(value: $gGuess)
+                    PlusButton(value: $gGuess, haptics: self.haptics)
                         .accentColor(Color(red: 0.0, green: gGuess + 0.25, blue: 0.0))
                     
                 }
                 HStack {
-                    MinusButton(value: $bGuess)
+                    MinusButton(value: $bGuess, haptics: self.haptics)
                         .accentColor(Color(red: 0.0, green: 0.0, blue: bGuess + 0.25))
                     ColorSlider(value: $bGuess)
                         .accentColor(Color(red: 0.0, green: 0.0, blue: bGuess + 0.25))
-                    PlusButton(value: $bGuess)
+                    PlusButton(value: $bGuess, haptics: self.haptics)
                         .accentColor(Color(red: 0.0, green: 0.0, blue: bGuess + 0.25))
                     
                 }
@@ -206,6 +215,8 @@ struct ContentView: View {
             //MARK: - Guess Button
             Button(action:{
                 self.showAlert = true
+                //self.notification.notificationOccurred(.success)
+				self.haptics.playHapticTransient(time: 0.0, intensity: 0.98, sharpness: 0.98)
             }) {
                 HStack {
                     Image(systemName: "eyedropper.halffull")
@@ -242,6 +253,7 @@ struct ContentView: View {
                         print(self.gameCounter)
                     })
             }
+            
         }
         .statusBar(hidden: true)
     }
@@ -269,11 +281,13 @@ struct ColorSlider: View {
 struct PlusButton: View {
     
     @Binding var value: Double
-    
+	let haptics: Haptics
+
     var body: some View {
         Button(action: {
+			let floatValue =  Float(self.value)
             self.value += 0.01
-            
+			self.haptics.playHapticTransient(time: 0.0, intensity: floatValue, sharpness: floatValue)
         }) {
             Text("+")
                 .font(.title)
@@ -285,10 +299,13 @@ struct PlusButton: View {
 struct MinusButton: View {
     
     @Binding var value: Double
-    
+    let haptics: Haptics
+	
     var body: some View {
         Button(action: {
+			let floatValue =  Float(self.value)
             self.value -= 0.01
+			self.haptics.playHapticTransient(time: 0.0, intensity: floatValue, sharpness: floatValue)
         }) {
             Text("-")
                 .font(.title)

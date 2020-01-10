@@ -42,18 +42,16 @@ class IAPManager: NSObject {
     // MARK: - General Methods
     
     fileprivate func getProductIDs() -> [String]? {
+         print("IAPMAnager getProductIDS()")
         guard let url = Bundle.main.url(forResource: "IAP_ProductIDs", withExtension: "plist") else {
-            print("failed to get ProductID plist")
             return nil
         }
         do {
             let data = try Data(contentsOf: url)
             let productIDs = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as? [String] ?? []
-            print("got productIDs: \(productIDs)")
             return productIDs
         } catch {
             print(error.localizedDescription)
-            print("Could not get the product IDS in IAPManager")
             return nil
         }
     }
@@ -68,16 +66,19 @@ class IAPManager: NSObject {
     
     
     func startObserving() {
+        print("IAPMAnager start observing")
         SKPaymentQueue.default().add(self)
     }
 
 
     func stopObserving() {
+         print("IAPMAnager stop")
         SKPaymentQueue.default().remove(self)
     }
     
     
     func canMakePayments() -> Bool {
+         print("IAPMAnager can make the payments")
         return SKPaymentQueue.canMakePayments()
     }
     
@@ -87,6 +88,7 @@ class IAPManager: NSObject {
     func getProducts(withHandler productsReceiveHandler: @escaping (_ result: Result<[SKProduct], IAPManagerError>) -> Void) {
         // Keep the handler (closure) that will be called when requesting for
         // products on the App Store is finished.
+         print("IAPMAnager getProducts() ")
         onReceiveProductsHandler = productsReceiveHandler
 
         // Get the product identifiers.
@@ -111,6 +113,7 @@ class IAPManager: NSObject {
     // MARK: - Purchase Products
     
     func buy(product: SKProduct, withHandler handler: @escaping ((_ result: Result<Bool, Error>) -> Void)) {
+         print("IAPMAnager buy")
         let payment = SKPayment(product: product)
         SKPaymentQueue.default().add(payment)
 
@@ -120,6 +123,7 @@ class IAPManager: NSObject {
     
     
     func restorePurchases(withHandler handler: @escaping ((_ result: Result<Bool, Error>) -> Void)) {
+         print("IAPMAnager restore")
         onBuyProductHandler = handler
         totalRestoredPurchases = 0
         SKPaymentQueue.default().restoreCompletedTransactions()
@@ -130,6 +134,7 @@ class IAPManager: NSObject {
 // MARK: - SKPaymentTransactionObserver
 extension IAPManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+         print("IAPMAnager payment queue")
         transactions.forEach { (transaction) in
             switch transaction.transactionState {
             case .purchased:
@@ -159,6 +164,7 @@ extension IAPManager: SKPaymentTransactionObserver {
     
     
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+         print("IAPMAnager long thingy")
         if totalRestoredPurchases != 0 {
             onBuyProductHandler?(.success(true))
         } else {
@@ -169,6 +175,7 @@ extension IAPManager: SKPaymentTransactionObserver {
     
     
     func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
+         print("IAPMAnager PaymentQueue2")
         if let error = error as? SKError {
             if error.code != .paymentCancelled {
                 print("IAP Restore Error:", error.localizedDescription)
@@ -186,6 +193,7 @@ extension IAPManager: SKPaymentTransactionObserver {
 // MARK: - SKProductsRequestDelegate
 extension IAPManager: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+         print("IAPMAnager producvtrequest(2)")
         // Get the available products contained in the response.
         let products = response.products
 
@@ -203,11 +211,13 @@ extension IAPManager: SKProductsRequestDelegate {
     
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
+         print("IAPMAnager request")
         onReceiveProductsHandler?(.failure(.productRequestFailed))
     }
     
     
     func requestDidFinish(_ request: SKRequest) {
+         print("IAPMAnager request finsih")
         // Implement this method OPTIONALLY and add any custom logic
         // you want to apply when a product request is finished.
     }

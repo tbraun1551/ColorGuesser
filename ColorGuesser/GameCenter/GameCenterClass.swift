@@ -11,6 +11,7 @@ import GameKit
 
 
 class GameCenterManager {
+	
             var gcEnabled = Bool() // Check if the user has Game Center enabled
             var gcDefaultLeaderBoard = String() // Check the default leaderboardID
             var score = 0

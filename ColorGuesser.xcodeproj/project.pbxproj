@@ -44,6 +44,7 @@
 		97BC3850239096D7008BB3CD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC384F239096D7008BB3CD /* ViewModel.swift */; };
 		97BC385223909757008BB3CD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC385123909757008BB3CD /* Model.swift */; };
 		97EE251B2385D62400A3AF37 /* AppIconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE251A2385D62400A3AF37 /* AppIconData.swift */; };
+		97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8D52B23C7BFC200DEF48E /* Haptics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +82,7 @@
 		97B7CE8F232FE1FB0091BB99 /* Iris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B7CE92232FE1FB0091BB99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B7CE94232FE1FB0091BB99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97B7CE96232FE1FB0091BB99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97B7CE96232FE1FB0091BB99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 1; };
 		97B7CE98232FE1FC0091BB99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B7CE9B232FE1FC0091BB99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97B7CE9E232FE1FC0091BB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		97BC384F239096D7008BB3CD /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		97BC385123909757008BB3CD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		97EE251A2385D62400A3AF37 /* AppIconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconData.swift; sourceTree = "<group>"; };
+		97F8D52B23C7BFC200DEF48E /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				79AB2027297FC5250D97250C /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		97B7CE90232FE1FB0091BB99 /* Products */ = {
 			isa = PBXGroup;
@@ -195,6 +198,7 @@
 				97B7CE96232FE1FB0091BB99 /* ContentView.swift */,
 				97B7244C2367E07D00903EAB /* LeaderBoardView.swift */,
 				9731F6312367B5F60034965D /* SettingsView.swift */,
+				97F8D52B23C7BFC200DEF48E /* Haptics.swift */,
 				97F1D7EC237C6A67001C4853 /* Settings Pages */,
 				9703516F2381D918007E7106 /* Store Files */,
 				9754E0A6236A4E3100903012 /* ColorGuesser.xcdatamodeld */,
@@ -355,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */,
 				976C4CC0237624660097834A /* PurchasePage.swift in Sources */,
 				9754E0A8236A4E3100903012 /* ColorGuesser.xcdatamodeld in Sources */,
 				972BACFF2378ABDE0076264C /* AboutMe.swift in Sources */,
@@ -511,7 +516,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.4;
+				CURRENT_PROJECT_VERSION = 3.1.0;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -539,7 +544,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.4;
+				CURRENT_PROJECT_VERSION = 3.1.0;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;

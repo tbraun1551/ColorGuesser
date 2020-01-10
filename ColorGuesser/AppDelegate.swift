@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import CoreData
 import StoreKit
+import CoreHaptics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          GADMobileAds.sharedInstance().start(completionHandler: nil)
         // Attach an observer to the payment queue.
         IAPManager.shared.startObserving()
+		
+		// Check if the device supports haptics.
+		var supportsHaptics: Bool = false
+        let hapticCapability = CHHapticEngine.capabilitiesForHardware()
+        supportsHaptics = hapticCapability.supportsHaptics
+		
+		
         return true
     }
 
@@ -66,12 +74,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-
+    //ADDED THIS BECAUSE DID NOT HAVE ANY TERMINATION
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Remove the observer.
+        IAPManager.shared.stopObserving()
+    }
+    
     // MARK: - Core Data Saving support
 
     func saveContext () {
-        // Remove the observer.
-        IAPManager.shared.stopObserving()
+//        // Remove the observer.
+//        IAPManager.shared.stopObserving()
         
         let context = persistentContainer.viewContext
         if context.hasChanges {

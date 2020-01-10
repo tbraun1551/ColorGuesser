@@ -90,6 +90,7 @@ class ViewModel {
     func viewDidSetup() {
         delegate?.willStartLongProcess()
         print("tester Setup")
+        
         IAPManager.shared.getProducts { (result) in
             DispatchQueue.main.async {
                 self.delegate?.didFinishLongProcess()
