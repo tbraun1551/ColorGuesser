@@ -11,22 +11,37 @@ import GoogleMobileAds
 import CoreData
 import StoreKit
 import CoreHaptics
+import SwiftyStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var supportsHaptics: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        // Attach an observer to the payment queue.
-        IAPManager.shared.startObserving()
-		
+		GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
 		// Check if the device supports haptics.
-		var supportsHaptics: Bool = false
         let hapticCapability = CHHapticEngine.capabilitiesForHardware()
         supportsHaptics = hapticCapability.supportsHaptics
+		
+		
+		//SwiftyStoreKit Observer
+		SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+			for purchase in purchases {
+				switch purchase.transaction.transactionState {
+				case .purchased, .restored:
+					if purchase.needsFinishTransaction {
+						// Deliver content from server, then:
+						SwiftyStoreKit.finishTransaction(purchase.transaction)
+					}
+					// Unlock content
+				case .failed, .purchasing, .deferred:
+					break // do nothing
+				}
+			}
+		}
 		
 		
         return true
@@ -76,8 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     //ADDED THIS BECAUSE DID NOT HAVE ANY TERMINATION
     func applicationWillTerminate(_ application: UIApplication) {
-        // Remove the observer.
-        IAPManager.shared.stopObserving()
+       
     }
     
     // MARK: - Core Data Saving support

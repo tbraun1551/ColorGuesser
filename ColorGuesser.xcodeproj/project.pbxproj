@@ -15,7 +15,6 @@
 		9731F62E2367302C0034965D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9731F62D2367302C0034965D /* Default-568h@2x.png */; };
 		9731F6322367B5F60034965D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9731F6312367B5F60034965D /* SettingsView.swift */; };
 		974017DC23905B8B009372A6 /* IAP_ProductIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 974017DB23905B8B009372A6 /* IAP_ProductIDs.plist */; };
-		974017DE23905C47009372A6 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974017DD23905C47009372A6 /* IAPManager.swift */; };
 		9754E0A8236A4E3100903012 /* ColorGuesser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9754E0A6236A4E3100903012 /* ColorGuesser.xcdatamodeld */; };
 		976A058C2373A6D500AA4A0C /* GameCenterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A058B2373A6D500AA4A0C /* GameCenterClass.swift */; };
 		976C4CC0237624660097834A /* PurchasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C4CBF237624660097834A /* PurchasePage.swift */; };
@@ -41,8 +40,7 @@
 		97B7CE99232FE1FC0091BB99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE98232FE1FC0091BB99 /* Assets.xcassets */; };
 		97B7CE9C232FE1FC0091BB99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE9B232FE1FC0091BB99 /* Preview Assets.xcassets */; };
 		97B7CE9F232FE1FC0091BB99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE9D232FE1FC0091BB99 /* LaunchScreen.storyboard */; };
-		97BC3850239096D7008BB3CD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC384F239096D7008BB3CD /* ViewModel.swift */; };
-		97BC385223909757008BB3CD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC385123909757008BB3CD /* Model.swift */; };
+		97DF80F823CC102900D7C4E3 /* SwiftyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF80F723CC102900D7C4E3 /* SwiftyStore.swift */; };
 		97EE251B2385D62400A3AF37 /* AppIconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE251A2385D62400A3AF37 /* AppIconData.swift */; };
 		97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8D52B23C7BFC200DEF48E /* Haptics.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +56,6 @@
 		9731F62D2367302C0034965D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9731F6312367B5F60034965D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		974017DB23905B8B009372A6 /* IAP_ProductIDs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IAP_ProductIDs.plist; sourceTree = "<group>"; };
-		974017DD23905C47009372A6 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		97432DC5235A4F5F001CB32A /* ColorGuesser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ColorGuesser.entitlements; sourceTree = "<group>"; };
 		9754E0A7236A4E3100903012 /* ColorGuesser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorGuesser.xcdatamodel; sourceTree = "<group>"; };
 		976A058B2373A6D500AA4A0C /* GameCenterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterClass.swift; sourceTree = "<group>"; };
@@ -87,8 +84,7 @@
 		97B7CE9B232FE1FC0091BB99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97B7CE9E232FE1FC0091BB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B7CEA0232FE1FC0091BB99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97BC384F239096D7008BB3CD /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		97BC385123909757008BB3CD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		97DF80F723CC102900D7C4E3 /* SwiftyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyStore.swift; sourceTree = "<group>"; };
 		97EE251A2385D62400A3AF37 /* AppIconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconData.swift; sourceTree = "<group>"; };
 		97F8D52B23C7BFC200DEF48E /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,10 +123,7 @@
 		9703516F2381D918007E7106 /* Store Files */ = {
 			isa = PBXGroup;
 			children = (
-				97BC384F239096D7008BB3CD /* ViewModel.swift */,
-				97BC385123909757008BB3CD /* Model.swift */,
 				974017DB23905B8B009372A6 /* IAP_ProductIDs.plist */,
-				974017DD23905C47009372A6 /* IAPManager.swift */,
 			);
 			path = "Store Files";
 			sourceTree = "<group>";
@@ -223,6 +216,7 @@
 			children = (
 				976FCABC23732171003BFBB6 /* AppIconChanger.swift */,
 				976C4CBF237624660097834A /* PurchasePage.swift */,
+				97DF80F723CC102900D7C4E3 /* SwiftyStore.swift */,
 				972BACFE2378ABDE0076264C /* AboutMe.swift */,
 				972BAD002378AC110076264C /* HelpPage.swift */,
 			);
@@ -362,19 +356,17 @@
 				97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */,
 				976C4CC0237624660097834A /* PurchasePage.swift in Sources */,
 				9754E0A8236A4E3100903012 /* ColorGuesser.xcdatamodeld in Sources */,
+				97DF80F823CC102900D7C4E3 /* SwiftyStore.swift in Sources */,
 				972BACFF2378ABDE0076264C /* AboutMe.swift in Sources */,
-				97BC3850239096D7008BB3CD /* ViewModel.swift in Sources */,
 				976A058C2373A6D500AA4A0C /* GameCenterClass.swift in Sources */,
 				97B7CE93232FE1FB0091BB99 /* AppDelegate.swift in Sources */,
 				97EE251B2385D62400A3AF37 /* AppIconData.swift in Sources */,
 				976FCABD23732171003BFBB6 /* AppIconChanger.swift in Sources */,
 				9731F6322367B5F60034965D /* SettingsView.swift in Sources */,
 				979241E5238B6CDC00D7DA8D /* PopupControllerMessage.swift in Sources */,
-				974017DE23905C47009372A6 /* IAPManager.swift in Sources */,
 				979241E7238B6CE000D7DA8D /* GameKitHelper.swift in Sources */,
 				97B7CE95232FE1FB0091BB99 /* SceneDelegate.swift in Sources */,
 				97B7CE97232FE1FB0091BB99 /* ContentView.swift in Sources */,
-				97BC385223909757008BB3CD /* Model.swift in Sources */,
 				97B7244D2367E07D00903EAB /* LeaderBoardView.swift in Sources */,
 				972BAD012378AC110076264C /* HelpPage.swift in Sources */,
 			);
@@ -516,7 +508,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.1.0;
+				CURRENT_PROJECT_VERSION = 4.0.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -544,7 +536,7 @@
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.1.0;
+				CURRENT_PROJECT_VERSION = 4.0.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
