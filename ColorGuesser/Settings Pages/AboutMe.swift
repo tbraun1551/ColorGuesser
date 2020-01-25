@@ -17,8 +17,7 @@ struct AboutMe: View {
 	@State var g = Double.random(in: 0..<1)
 	
 	let aboutMe = """
-Hey guys, my name is Thomas Braun.
-I was born and raised in the city of Chicago, Illinois. I am currently a Computer Science and History major at Amherst College.
+	Hey guys, my name is Thomas Braun. I was born and raised in the city of Chicago, Illinois. I am currently a Computer Science and History major at Amherst College.
 """
 	
 	var body: some View {
@@ -44,7 +43,7 @@ I was born and raised in the city of Chicago, Illinois. I am currently a Compute
 						.shadow(radius: 10)
 				}
 				Text(aboutMe)
-					.padding(.horizontal, 3.0)
+					.padding()
 			}
 			Spacer()
 			VStack {

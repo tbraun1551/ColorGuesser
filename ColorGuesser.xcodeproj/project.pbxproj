@@ -131,6 +131,9 @@
 		976FCABE237324F7003BFBB6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				97432DC5235A4F5F001CB32A /* ColorGuesser.entitlements */,
+				97B7CE92232FE1FB0091BB99 /* AppDelegate.swift */,
+				97B7CE94232FE1FB0091BB99 /* SceneDelegate.swift */,
 				972BAD042378B1BF0076264C /* appIconData.json */,
 				976C4CC3237663F10097834A /* Icon1@1x.png */,
 				976C4CC5237663F10097834A /* Icon1@2x.png */,
@@ -185,9 +188,6 @@
 				979241E3238B6CB100D7DA8D /* GameCenter */,
 				972BAD062378B90E0076264C /* Models */,
 				976FCABE237324F7003BFBB6 /* Resources */,
-				97432DC5235A4F5F001CB32A /* ColorGuesser.entitlements */,
-				97B7CE92232FE1FB0091BB99 /* AppDelegate.swift */,
-				97B7CE94232FE1FB0091BB99 /* SceneDelegate.swift */,
 				97B7CE96232FE1FB0091BB99 /* ContentView.swift */,
 				97B7244C2367E07D00903EAB /* LeaderBoardView.swift */,
 				9731F6312367B5F60034965D /* SettingsView.swift */,
@@ -506,10 +506,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.0.4;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 4.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
 				ENABLE_PREVIEWS = YES;
@@ -519,10 +519,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Braun.ColorGuesser;
 				PRODUCT_NAME = Iris;
-				SUPPORTS_MACCATALYST = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -534,10 +535,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ColorGuesser/ColorGuesser.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.0.4;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 4.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
 				ENABLE_PREVIEWS = YES;
@@ -547,10 +548,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Braun.ColorGuesser;
 				PRODUCT_NAME = Iris;
-				SUPPORTS_MACCATALYST = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

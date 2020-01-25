@@ -83,13 +83,10 @@ public class Haptics {
 	// Play a haptic transient pattern at the given time, intensity, and sharpness.
 	func playHapticTransient(time: TimeInterval, intensity: Float, sharpness: Float) {
 		   
-		   // Abort if the device doesn't support haptics.
+//		   // Abort if the device doesn't support haptics.
 //		   if !supportsHaptics {
 //			   return
 //		   }
-		   
-		   // Flash the pad background to indicate that the timer fired.
-//		   self.flashBackground(in: self.transientPalette)
 		   
 		   // Create an event (static) parameter to represent the haptic's intensity.
 		   let intensityParameter = CHHapticEventParameter(parameterID: .hapticIntensity, value: intensity)
@@ -111,34 +108,4 @@ public class Haptics {
 			   print("Error creating a haptic transient pattern: \(error)")
 		   }
 	   }
-	
-//	func createContinuousHapticPlayer() {
-//        // Create an intensity parameter:
-//        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: initialIntensity)
-//
-//        // Create a sharpness parameter:
-//        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: initialSharpness)
-//
-//        // Create a continuous event with a long duration from the parameters.
-//        let continuousEvent = CHHapticEvent(eventType: .hapticContinuous, parameters: [intensity, sharpness], relativeTime: 0, duration: 100)
-//
-//        do {
-//            // Create a pattern from the continuous haptic event.
-//            let pattern = try CHHapticPattern(events: [continuousEvent], parameters: [])
-//
-//            // Create a player from the continuous haptic pattern.
-//            continuousPlayer = try engine.makeAdvancedPlayer(with: pattern)
-//
-//        } catch let error {
-//            print("Pattern Player Creation Error: \(error)")
-//        }
-//
-//        continuousPlayer.completionHandler = { _ in
-//            DispatchQueue.main.async {
-//                // Restore original color.
-//                self.continuousPalette.backgroundColor = self.padColor
-//            }
-//        }
-//    }
-	
 }

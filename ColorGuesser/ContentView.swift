@@ -10,6 +10,7 @@ import SwiftUI
 import GoogleMobileAds
 import UIKit
 import GameKit
+import StoreKit
 
 struct ContentView: View {
 	//Checks whether app stupports haptic feedback
@@ -83,11 +84,25 @@ struct ContentView: View {
 	}
 	func showAdvertisment(){
 		let randomAd = Bool.random()
+		let randomReview1 = Bool.random()
+		let randomReview2 = Bool.random()
+		let randomReview3 = Bool.random()
+		let randomReview4 = Bool.random()
+		let randomReview5 = Bool.random()
+		
 		if (randomAd == true) {
 			self.interstitialAd.showAd()
 			print("Display Ad")
 		} else {
 			print("Not displaying Ad this time around")
+			if (randomReview1 == true){
+				if (randomReview2 == true){
+					if (randomReview3 == true){
+						print("asking for review")
+						SKStoreReviewController.requestReview()
+					}
+				}
+			}
 		}
 		self.interstitialAd.LoadInterstitial()
 	}
@@ -245,7 +260,7 @@ struct ContentView: View {
 					self.submitScore()
 					print("Keeping Guessing")
 					self.tryCounter += 1
-					if(self.tryCounter % 3 == 0) {
+					if(self.tryCounter % 2 == 0) {
 						self.showAdvertisment()
 						print("Potench showing a new ad")
 					}

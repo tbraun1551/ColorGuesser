@@ -19,11 +19,12 @@ struct HelpPage: View {
                 .offset(x: -75)
             Text(
                 """
-                I am really sorry to here that you have been having trouble with my app. I have worked hard to try and make it as user friendly and bug free as possible, however it is my first app so there is bound to be some mistakes.
-                If you find any problems or need help, you can email me using the button below, or you can reach out to me using any of the links on the about page in settings. 
+                I am sorry to hear that you have been having trouble with Iris. I have worked hard to try and make it as user friendly and bug free as possible, however as with any program there are bound to be bugs and issues.
+            If you find any problems or need help, you can email me using the button below, or you can reach out to me using any of the links on the about page in settings.
             """
             )
                 .padding()
+			Spacer()
             Button(action: {
                 let url = URL(string: "mailto:BraunDevelopment@icloud.com")!
                 UIApplication.shared.open(url)
@@ -31,6 +32,7 @@ struct HelpPage: View {
                 Text("E-Mail Me").fixedSize()
             }
             .padding()
+			Spacer()
         }
         .navigationBarTitle(Text(""), displayMode: .inline)
     }

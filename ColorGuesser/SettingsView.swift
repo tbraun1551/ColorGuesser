@@ -11,12 +11,11 @@ import StoreKit
 
 struct SettingsView: View {
     
-    let instructions = """
-        The goal of Iris, is to match the color of the block on the right to the color of the block on the left as accuratly as possible by using the sliders and + and - buttons. You can keep guessing as many times as you want to get the highest score possible, but only your first score will be submitted to Gamecenter.
-
-    """
-    //        To do this use the RGB sliders and + and - buttons below the blocks and once you think you got it hit Guess!
-    //        If its your first guess, your score will be submitted to GameCenter so you can compare scores and compete against your friends to see who can get the highest score on their first try.
+	let instructions = #"""
+    The goal of Iris is to match the color of the block of the two blocks as accurately as possible by using the sliders and the ‘+’ and ‘-‘ buttons. You can take as many guesses as you want, but only your first score will be submitted to Game Center.
+        By tapping the game controller icon on the top left of the home screen you can access the Iris leaderboards and see how your high score compares to your friends and the rest of the world.
+    """#
+	
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var showActionSheet = false
     @State var showAppIconChanger = false
@@ -27,11 +26,11 @@ struct SettingsView: View {
                 VStack {
                     Text("Instructions")
                         .fixedSize()
-                        .font(.headline)
+						.font(.title)
                         .multilineTextAlignment(.leading)
                     Text(instructions)
                         .font(.body)
-                        .padding()
+						.padding(.horizontal)
                 }
                 List{
                     NavigationLink(destination: AppIconChanger()){
@@ -77,7 +76,6 @@ struct SettingsView: View {
                             Text("Rate Iris")
                         }
                     }
-                    
                 }
             }
         }

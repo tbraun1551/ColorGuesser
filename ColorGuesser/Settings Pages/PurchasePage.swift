@@ -10,6 +10,7 @@ import SwiftUI
 import StoreKit
 import Foundation
 import SwiftyStoreKit
+import Network
 
 struct PurchasePage: View {
 	
@@ -23,7 +24,8 @@ struct PurchasePage: View {
 				.multilineTextAlignment(.leading)
 				.offset(x: -75)
 			Text("""
-    If you've really, really enojoyed Iris thus far, you can leave exta tips to support the apps further development. Obviously any tip is appreciated but do not feel obligated to do so.
+		If you've really enjoyed Iris thus far, you can leave extra tips to support the developer and further advancements to the game. While any tip is appreciated there is no obligation to do so.
+	
 """)
 				.multilineTextAlignment(.leading)
 				.padding(.horizontal)
@@ -34,7 +36,7 @@ struct PurchasePage: View {
 				tipButton(type: "Generous Tip", price: 4, index: 2)
 				tipButton(type: "Awesome Tip", price: 9, index: 3)
 				tipButton(type: "Superhuman Tip", price: 19, index: 4)
-				tipButton(type: "Full Send Tip", price: 999, index: 5)
+				tipButton(type: "Full Send Tip", price: 99, index: 5)
 			}
 //			.padding(.vertical, 8.0)
 			.padding()
@@ -51,7 +53,7 @@ struct tipButton: View {
 	//    let observer = StoreObserver()
 	
 	let swifty = SwiftyStore()
-	
+	let monitor = NWPathMonitor()
 	var type: String
 	var price: Int
 	var index: Int

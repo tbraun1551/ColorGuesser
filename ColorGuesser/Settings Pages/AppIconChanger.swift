@@ -25,6 +25,7 @@ struct AppIconChanger: View {
     var body: some View {
         VStack{
             VStack {
+				Spacer()
                 Text("Change App Icon Color")
                     .font(.title)
                     .fontWeight(.bold)
