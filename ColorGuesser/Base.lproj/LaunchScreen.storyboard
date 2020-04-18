@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,12 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IRIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-re-Y6t">
-                                <rect key="frame" x="158" y="403" width="98" height="90"/>
+                                <rect key="frame" x="103" y="398" width="208" height="101"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="TTl-kJ-7uk"/>
-                                    <constraint firstAttribute="height" constant="90" id="bwS-4t-nBe"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="101" id="5uf-x2-mOz"/>
+                                    <constraint firstAttribute="width" secondItem="dFr-re-Y6t" secondAttribute="height" multiplier="208:101" id="Qbq-VG-6dM"/>
+                                    <constraint firstAttribute="width" constant="208" id="TTl-kJ-7uk"/>
+                                    <constraint firstAttribute="height" constant="101" id="bwS-4t-nBe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="208" id="mgg-Gi-NGg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="125"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

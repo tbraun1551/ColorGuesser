@@ -40,6 +40,7 @@
 		97B7CE99232FE1FC0091BB99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE98232FE1FC0091BB99 /* Assets.xcassets */; };
 		97B7CE9C232FE1FC0091BB99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE9B232FE1FC0091BB99 /* Preview Assets.xcassets */; };
 		97B7CE9F232FE1FC0091BB99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7CE9D232FE1FC0091BB99 /* LaunchScreen.storyboard */; };
+		97C6A5C8244A6314005DDD63 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C6A5C7244A6314005DDD63 /* SplashView.swift */; };
 		97DF80F823CC102900D7C4E3 /* SwiftyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF80F723CC102900D7C4E3 /* SwiftyStore.swift */; };
 		97EE251B2385D62400A3AF37 /* AppIconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE251A2385D62400A3AF37 /* AppIconData.swift */; };
 		97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8D52B23C7BFC200DEF48E /* Haptics.swift */; };
@@ -84,6 +85,7 @@
 		97B7CE9B232FE1FC0091BB99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97B7CE9E232FE1FC0091BB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B7CEA0232FE1FC0091BB99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C6A5C7244A6314005DDD63 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		97DF80F723CC102900D7C4E3 /* SwiftyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyStore.swift; sourceTree = "<group>"; };
 		97EE251A2385D62400A3AF37 /* AppIconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconData.swift; sourceTree = "<group>"; };
 		97F8D52B23C7BFC200DEF48E /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				976FCABE237324F7003BFBB6 /* Resources */,
 				97B7CE96232FE1FB0091BB99 /* ContentView.swift */,
 				97B7244C2367E07D00903EAB /* LeaderBoardView.swift */,
+				97C6A5C7244A6314005DDD63 /* SplashView.swift */,
 				9731F6312367B5F60034965D /* SettingsView.swift */,
 				97F8D52B23C7BFC200DEF48E /* Haptics.swift */,
 				97F1D7EC237C6A67001C4853 /* Settings Pages */,
@@ -355,6 +358,7 @@
 			files = (
 				97F8D52C23C7BFC200DEF48E /* Haptics.swift in Sources */,
 				976C4CC0237624660097834A /* PurchasePage.swift in Sources */,
+				97C6A5C8244A6314005DDD63 /* SplashView.swift in Sources */,
 				9754E0A8236A4E3100903012 /* ColorGuesser.xcdatamodeld in Sources */,
 				97DF80F823CC102900D7C4E3 /* SwiftyStore.swift in Sources */,
 				972BACFF2378ABDE0076264C /* AboutMe.swift in Sources */,
@@ -509,7 +513,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.1.3;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -520,7 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Braun.ColorGuesser;
 				PRODUCT_NAME = Iris;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -539,7 +543,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.1.3;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorGuesser/Preview Content\"";
 				DEVELOPMENT_TEAM = GFGJV6265F;
@@ -550,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Braun.ColorGuesser;
 				PRODUCT_NAME = Iris;
 				PROVISIONING_PROFILE_SPECIFIER = "";

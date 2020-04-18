@@ -20,7 +20,11 @@ struct ContentView: View {
 	}()
 	
 	var interstitialAd: Interstitial
+	var splashIris: SplashView
+	var splashGuess: SplashView
 	init(){
+		self.splashIris = SplashView("Iris", nil)
+		self.splashGuess = SplashView("Guess", "eyedropper.halffull")
 		self.interstitialAd = Interstitial()
 		self.leaderboard = LeaderBoard()
 		self.settings = SettingsView()
@@ -73,7 +77,6 @@ struct ContentView: View {
 		}
 	}
 	
-	
 	//MARK: -Functions
 	func computeScore() -> Int {
 		let rDiff = rGuess - rTarget
@@ -87,8 +90,8 @@ struct ContentView: View {
 		let randomReview1 = Bool.random()
 		let randomReview2 = Bool.random()
 		let randomReview3 = Bool.random()
-		let randomReview4 = Bool.random()
-		let randomReview5 = Bool.random()
+//		let randomReview4 = Bool.random()
+//		let randomReview5 = Bool.random()
 		
 		if (randomAd == true) {
 			self.interstitialAd.showAd()
@@ -124,6 +127,7 @@ struct ContentView: View {
 		self.interstitialAd.LoadInterstitial()
 	}
 	
+	
 	var body: some View {
 		VStack {
 			//MARK: -Top Buttons
@@ -153,11 +157,12 @@ struct ContentView: View {
 				Button(action: {
 					self.showIrisSheet = true
 				}) {
-					Text("Iris")
-						.font(.largeTitle)
-						.fontWeight(.semibold)
-						.multilineTextAlignment(.center)
-						.foregroundColor(Color(red:rGuess + 0.2, green: gGuess + 0.2, blue: bGuess + 0.2))
+					splashIris
+//					Text("Iris")
+//						.font(.largeTitle)
+//						.fontWeight(.semibold)
+//						.multilineTextAlignment(.center)
+//						.foregroundColor(Color(red:rGuess + 0.2, green: gGuess + 0.2, blue: bGuess + 0.2))
 				}.actionSheet(isPresented: $showIrisSheet) {
 					ActionSheet(title: Text("How to play"), message: Text(settings.instructions), buttons: [.default(Text("Back To Game"))])
 				}

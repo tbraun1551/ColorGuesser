@@ -3,4 +3,54 @@
    uuid = "2468B5E1-002F-461F-B55C-7E7912D97951"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C402ACAA-7206-4EB5-83B5-0A10851D9980"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ColorGuesser/SplashView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body(content:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C402ACAA-7206-4EB5-83B5-0A10851D9980 - 5fbe431091790249"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Iris.Rainbow.body(content: SwiftUI._ViewModifier_Content&lt;Iris.Rainbow&gt;) -&gt; some"
+                  moduleName = "Iris"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasbraun/Documents/Xcode/Iris/ColorGuesser/ColorGuesser/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "C402ACAA-7206-4EB5-83B5-0A10851D9980 - 7b06f52fc1b1271f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.ZStack&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in Iris.Rainbow.body(content: SwiftUI._ViewModifier_Content&lt;Iris.Rainbow&gt;) -&gt; some"
+                  moduleName = "Iris"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasbraun/Documents/Xcode/Iris/ColorGuesser/ColorGuesser/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
